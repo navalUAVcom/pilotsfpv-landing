@@ -147,7 +147,7 @@
 
     /* HERO SECTION */
     .hero {
-      padding: 5rem 0 4rem;
+      padding: 5rem 0 3rem;
       text-align: center;
       max-width: 820px;
       margin: 0 auto;
@@ -194,116 +194,15 @@
       color: var(--text-muted);
       font-size: 1.15rem;
       line-height: 1.6;
-      margin-bottom: 2.5rem;
+      margin-bottom: 2rem;
       max-width: 720px;
       margin-left: auto;
       margin-right: auto;
     }
 
-    /* WAITLIST FORM */
-    .waitlist-container {
-      max-width: 520px;
-      margin: 0 auto 1.5rem;
-    }
-
-    .waitlist-form {
-      display: flex;
-      gap: 0.6rem;
-      flex-direction: column;
-    }
-
-    @media (min-width: 540px) {
-      .waitlist-form {
-        flex-direction: row;
-      }
-    }
-
-    .waitlist-input {
-      flex: 1;
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      padding: 0.9rem 1.2rem;
-      color: var(--text-white);
-      font-size: 0.95rem;
-      outline: none;
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
-
-    .waitlist-input:focus {
-      border-color: var(--cyber-mint);
-      box-shadow: 0 0 12px var(--mint-glow);
-    }
-
-    .waitlist-input::placeholder {
-      color: #6C757D;
-    }
-
-    .waitlist-btn {
-      background: var(--cyber-mint);
-      color: var(--bg-main);
-      border: none;
-      border-radius: 8px;
-      padding: 0.9rem 1.5rem;
-      font-size: 0.9rem;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      cursor: pointer;
-      white-space: nowrap;
-      transition: transform 0.15s ease, background-color 0.2s, box-shadow 0.2s;
-    }
-
-    .waitlist-btn:hover {
-      background: var(--mint-soft);
-      box-shadow: 0 0 20px rgba(0, 245, 184, 0.4);
-      transform: translateY(-1px);
-    }
-
-    .waitlist-btn:disabled {
-      opacity: 0.6;
-      cursor: not-allowed;
-      transform: none;
-    }
-
-    .form-note {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      margin-top: 0.75rem;
-    }
-
-    .form-note a {
-      color: var(--text-muted);
-      text-decoration: underline;
-    }
-
-    .form-message {
-      margin-top: 1rem;
-      padding: 0.8rem 1rem;
-      border-radius: 6px;
-      font-size: 0.9rem;
-      display: none;
-    }
-    .form-message.success {
-      display: block;
-      background: rgba(0, 245, 184, 0.1);
-      border: 1px solid var(--cyber-mint);
-      color: var(--cyber-mint);
-    }
-    .form-message.error {
-      display: block;
-      background: rgba(255, 85, 85, 0.1);
-      border: 1px solid #FF5555;
-      color: #FF5555;
-    }
-
-    /* Honeypot field (hidden from real users) */
-    .hp-field {
-      display: none !important;
-    }
-
     /* ABSTRACT NETWORK GRAPHIC */
     .network-graphic {
-      margin: 3rem auto 0;
+      margin: 2rem auto 0;
       max-width: 600px;
       height: 120px;
       position: relative;
@@ -412,7 +311,7 @@
       line-height: 1.55;
     }
 
-    /* BOTTOM WAITLIST */
+    /* BOTTOM PROJECT NOTICE */
     .bottom-cta {
       background: var(--bg-card);
       border: 1px solid var(--border-color);
@@ -440,10 +339,10 @@
 
     .bottom-cta p {
       color: var(--text-muted);
-      margin-bottom: 2rem;
-      max-width: 540px;
+      max-width: 580px;
       margin-left: auto;
       margin-right: auto;
+      line-height: 1.6;
     }
 
     /* FOOTER */
@@ -451,7 +350,7 @@
       border-top: 1px solid var(--border-color);
       padding: 2.5rem 0;
       color: var(--text-muted);
-      font-size: 0.85rem;
+      font-size: 0.88rem;
     }
 
     .footer-inner {
@@ -468,6 +367,18 @@
         justify-content: space-between;
         text-align: left;
       }
+    }
+
+    .footer-brand a {
+      color: var(--cyber-mint);
+      text-decoration: none;
+      font-weight: 700;
+      transition: color 0.2s;
+    }
+
+    .footer-brand a:hover {
+      color: var(--text-white);
+      text-decoration: underline;
     }
 
     .footer-links {
@@ -497,17 +408,17 @@
       
       <div class="lang-switcher" id="langSwitcher">
         <button class="lang-btn active" onclick="switchLanguage('en')">EN</button>
-        <button class="lang-btn" onclick="switchLanguage('zh')">ZH</button>
-        <button class="lang-btn" onclick="switchLanguage('es')">ES</button>
+        <button class="lang-btn" onclick="switchLanguage('cs')">CZ</button>
+        <button class="lang-btn" onclick="switchLanguage('sk')">SK</button>
         <button class="lang-btn" onclick="switchLanguage('de')">DE</button>
         <button class="lang-btn" onclick="switchLanguage('fr')">FR</button>
+        <button class="lang-btn" onclick="switchLanguage('es')">ES</button>
         <button class="lang-btn" onclick="switchLanguage('it')">IT</button>
+        <button class="lang-btn" onclick="switchLanguage('pl')">PL</button>
+        <button class="lang-btn" onclick="switchLanguage('pt')">PT</button>
         <button class="lang-btn" onclick="switchLanguage('ja')">JA</button>
         <button class="lang-btn" onclick="switchLanguage('ko')">KO</button>
-        <button class="lang-btn" onclick="switchLanguage('pt')">PT</button>
-        <button class="lang-btn" onclick="switchLanguage('pl')">PL</button>
-        <button class="lang-btn" onclick="switchLanguage('cs')">CS</button>
-        <button class="lang-btn" onclick="switchLanguage('sk')">SK</button>
+        <button class="lang-btn" onclick="switchLanguage('zh')">ZH</button>
       </div>
     </div>
   </header>
@@ -518,7 +429,7 @@
     <section class="hero">
       <div class="badge-overline">
         <span class="badge-dot"></span>
-        <span id="txt-badge">GLOBAL FPV PILOT DIRECTORY</span>
+        <span id="txt-badge">PROJECT UNDER DEVELOPMENT</span>
       </div>
 
       <h1 id="txt-h1">
@@ -528,29 +439,6 @@
       <p class="hero-lead" id="txt-lead">
         One global network of professional FPV pilots for industry, film, security and more. Find the right pilot for your project — wherever it takes you.
       </p>
-
-      <!-- HERO WAITLIST FORM -->
-      <div class="waitlist-container">
-        <form class="waitlist-form" id="heroWaitlistForm" onsubmit="handleWaitlistSubmit(event, 'heroWaitlistForm')">
-          <input type="text" name="website_check" class="hp-field" tabindex="-1" autocomplete="off" />
-          
-          <input 
-            type="email" 
-            name="email" 
-            class="waitlist-input" 
-            placeholder="Your email address" 
-            id="input-email-hero"
-            required 
-          />
-          <button type="submit" class="waitlist-btn" id="btn-submit-hero">JOIN THE WAITLIST →</button>
-        </form>
-        
-        <p class="form-note" id="txt-note">
-          Be among the first. Early access for pilots and companies. <a href="#privacy">Privacy Policy</a>
-        </p>
-
-        <div class="form-message" id="hero-msg"></div>
-      </div>
 
       <!-- ABSTRACT NETWORK GRAPHIC -->
       <div class="network-graphic">
@@ -629,32 +517,10 @@
       </div>
     </section>
 
-    <!-- BOTTOM WAITLIST CTA -->
+    <!-- BOTTOM PROJECT NOTICE -->
     <section class="bottom-cta">
-      <h2 id="txt-cta-title">Be part of the global FPV network.</h2>
-      <p id="txt-cta-desc">Join the waitlist and be among the first to know when PILOTSFPV.COM launches.</p>
-
-      <div class="waitlist-container">
-        <form class="waitlist-form" id="bottomWaitlistForm" onsubmit="handleWaitlistSubmit(event, 'bottomWaitlistForm')">
-          <input type="text" name="website_check" class="hp-field" tabindex="-1" autocomplete="off" />
-          
-          <input 
-            type="email" 
-            name="email" 
-            class="waitlist-input" 
-            placeholder="Your email address" 
-            id="input-email-bottom"
-            required 
-          />
-          <button type="submit" class="waitlist-btn" id="btn-submit-bottom">JOIN THE WAITLIST →</button>
-        </form>
-        
-        <p class="form-note" id="txt-note-bottom">
-          Be among the first. Early access for pilots and companies.
-        </p>
-
-        <div class="form-message" id="bottom-msg"></div>
-      </div>
+      <h2 id="txt-cta-title">Building the future of FPV networking.</h2>
+      <p id="txt-cta-desc">PILOTSFPV.COM is currently under active development as a global platform connecting pilots, production studios, and industrial leaders worldwide.</p>
     </section>
 
   </main>
@@ -662,8 +528,8 @@
   <!-- FOOTER -->
   <footer>
     <div class="container footer-inner">
-      <div>
-        <p>© 2026 PILOTSFPV.COM • <span id="txt-footer-tag">Global FPV Pilot Directory</span></p>
+      <div class="footer-brand">
+        <p>© 2026 PILOTSFPV.COM • <span id="txt-footer-tag">Za projektem stojí a provozuje</span> <a href="https://fpvvideo.cz" target="_blank" rel="noopener">fpvvideo.cz</a></p>
       </div>
       <div class="footer-links">
         <a href="#privacy" id="txt-privacy">Privacy Policy</a>
@@ -676,12 +542,9 @@
     // 12 LANGUAGE TRANSLATIONS DICTIONARY
     const i18n = {
       en: {
-        badge: "GLOBAL FPV PILOT DIRECTORY",
+        badge: "PROJECT UNDER DEVELOPMENT",
         h1: 'Find <span class="mint-text">FPV</span> pilots.<br>Anywhere in the world.',
         lead: "One global network of professional FPV pilots for industry, film, security and more. Find the right pilot for your project — wherever it takes you.",
-        inputPlaceholder: "Your email address",
-        btnSubmit: "JOIN THE WAITLIST →",
-        note: 'Be among the first. Early access for pilots and companies. <a href="#privacy">Privacy Policy</a>',
         strip1: "GLOBAL NETWORK",
         strip2: "PROFESSIONAL PILOTS",
         strip3: "INDUSTRY READY",
@@ -696,22 +559,16 @@
         card3Desc: "Professional pilots for monitoring, surveillance and specialist operations.",
         card4Title: "GLOBAL COMMUNITY",
         card4Desc: "Connect with professional FPV pilots and real projects worldwide.",
-        ctaTitle: "Be part of the global FPV network.",
-        ctaDesc: "Join the waitlist and be among the first to know when PILOTSFPV.COM launches.",
-        ctaNote: "Be among the first. Early access for pilots and companies.",
-        footerTag: "Global FPV Pilot Directory",
+        ctaTitle: "Building the future of FPV networking.",
+        ctaDesc: "PILOTSFPV.COM is currently under active development as a global platform connecting pilots, production studios, and industrial leaders worldwide.",
+        footerTag: "Za projektem stojí a provozuje",
         privacy: "Privacy Policy",
-        terms: "Terms",
-        msgSuccess: "You're on the list. We'll be in touch.",
-        msgError: "Something went wrong. Please check your email and try again."
+        terms: "Terms"
       },
       cs: {
-        badge: "GLOBÁLNÍ ADRESÁŘ FPV PILOTŮ",
+        badge: "PROJEKT VE VÝVOJI",
         h1: 'Najděte <span class="mint-text">FPV</span> piloty.<br>Kdekoliv na světě.',
-        lead: "Jedna globální síť profesionálních FPV pilotů pro průmysl, film, bezpečnost a další obory. Najděte správného pilota pro váš projekt — kdekoliv na světě.",
-        inputPlaceholder: "Váš e-mail",
-        btnSubmit: "PŘIPOJIT SE NA WAITLIST →",
-        note: 'Buďte mezi prvními. Přednostní přístup pro piloty a firmy. <a href="#privacy">Zásady ochrany soukromí</a>',
+        lead: "Na tomto místě vzniká nový mezinárodní projekt — jednotná globální databáze a síť propojující profesionální FPV piloty s filmovou produkcí, průmyslem, bezpečností a autonomními technologiemi.",
         strip1: "GLOBÁLNÍ SÍŤ",
         strip2: "PROFESIONÁLNÍ PILOTI",
         strip3: "PRŮMYSLOVÉ VYUŽITÍ",
@@ -726,22 +583,16 @@
         card3Desc: "Profesionální piloti pro monitorování, dohled a specializované operace.",
         card4Title: "GLOBÁLNÍ KOMUNITA",
         card4Desc: "Propojení profesionálních FPV pilotů s reálnými projekty po celém světě.",
-        ctaTitle: "Buďte součástí globální FPV sítě.",
-        ctaDesc: "Zapište se na waitlist a získejte informace o spuštění PILOTSFPV.COM mezi prvními.",
-        ctaNote: "Buďte mezi prvními. Přednostní přístup pro piloty a firmy.",
-        footerTag: "Globální adresář FPV pilotů",
+        ctaTitle: "Projekt se buduje — ještě není plně spuštěný.",
+        ctaDesc: "PILOTSFPV.COM je aktuálně ve fázi vývoje. Vytváříme globální platformu pro propojení FPV pilotů, produkcí a průmyslových partnerů po celém světě.",
+        footerTag: "Za projektem stojí a provozuje",
         privacy: "Ochrana soukromí",
-        terms: "Podmínky",
-        msgSuccess: "Jste na seznamu. Brzy se vám ozveme.",
-        msgError: "Něco se nepodařilo. Zkontrolujte e-mail a zkuste to znovu."
+        terms: "Podmínky"
       },
       sk: {
-        badge: "GLOBÁLNY ADRESÁR FPV PILOTOV",
+        badge: "PROJEKT VO VÝVOJI",
         h1: 'Nájdite <span class="mint-text">FPV</span> pilotov.<br>Kdekoľvek na svete.',
-        lead: "Jedna globálna sieť profesionálnych FPV pilotov pre priemysel, film, bezpečnosť a ďalšie odvetvia. Nájdite správneho pilota pre váš projekt.",
-        inputPlaceholder: "Váš e-mail",
-        btnSubmit: "PRIDAŤ SA NA WAITLIST →",
-        note: 'Buďte medzi prvými. Prednostný prístup pre pilotov a firmy. <a href="#privacy">Ochrana súkromia</a>',
+        lead: "Na tomto mieste vzniká nový medzinárodný projekt — jednotná globálna databáza a sieť prepájajúca profesionálnych FPV pilotov s filmovou produkciou, priemyslom a bezpečnosťou.",
         strip1: "GLOBÁLNA SIEŤ",
         strip2: "PROFESIONÁLNI PILOTI",
         strip3: "PRIEMYSELNÉ VYUŽITIE",
@@ -756,22 +607,16 @@
         card3Desc: "Profesionálni piloti pre monitorovanie, dohľad a špeciálne operácie.",
         card4Title: "GLOBÁLNA KOMUNITA",
         card4Desc: "Prepojenie profesionálnych FPV pilotov s reálnymi projektmi po celom svete.",
-        ctaTitle: "Buďte súčasťou globálnej FPV siete.",
-        ctaDesc: "Zapíšte sa na waitlist a získajte informácie o spustení PILOTSFPV.COM medzi prvými.",
-        ctaNote: "Buďte medzi prvými. Prednostný prístup pre pilotov a firmy.",
-        footerTag: "Globálny adresár FPV pilotov",
+        ctaTitle: "Projekt sa buduje — ešte nie je plne spustený.",
+        ctaDesc: "PILOTSFPV.COM je aktuálne vo fáze vývoja. Vytvárame globálnu platformu pre prepojenie FPV pilotov a priemyselných partnerov.",
+        footerTag: "Za projektom stojí a prevádzkuje",
         privacy: "Ochrana súkromia",
-        terms: "Podmienky",
-        msgSuccess: "Ste na zozname. Čoskoro sa vám ozveme.",
-        msgError: "Niečo sa nepodarilo. Skontrolujte e-mail a skúste to znova."
+        terms: "Podmienky"
       },
       de: {
-        badge: "GLOBALE FPV-PILOTEN-DATENBANK",
+        badge: "PROJEKT IN ENTWICKLUNG",
         h1: 'Finden Sie <span class="mint-text">FPV</span>-Piloten.<br>Überall auf der Welt.',
-        lead: "Ein globales Netzwerk professioneller FPV-Piloten für Industrie, Film, Sicherheit und mehr. Finden Sie den passenden Piloten für Ihr Projekt.",
-        inputPlaceholder: "Ihre E-Mail-Adresse",
-        btnSubmit: "WAITLIST BEITRETEN →",
-        note: 'Gehören Sie zu den Ersten. Früher Zugang für Piloten und Unternehmen. <a href="#privacy">Datenschutz</a>',
+        lead: "Hier entsteht ein neues internationales Projekt — ein globales Verzeichnis und Netzwerk zur Vernetzung von FPV-Piloten mit Filmproduktion, Industrie und Sicherheit.",
         strip1: "GLOBALES NETZWERK",
         strip2: "PROFI-PILOTEN",
         strip3: "INDUSTRIEBEREIT",
@@ -786,22 +631,16 @@
         card3Desc: "Professionelle Piloten für Überwachung und Spezialeinsätze.",
         card4Title: "GLOBALE COMMUNITY",
         card4Desc: "Vernetzen Sie sich weltweit mit professionellen FPV-Piloten.",
-        ctaTitle: "Werden Sie Teil des globalen FPV-Netzwerks.",
-        ctaDesc: "Tragen Sie sich in die Warteliste ein und erfahren Sie als Erste vom Start.",
-        ctaNote: "Gehören Sie zu den Ersten. Früher Zugang für Piloten und Unternehmen.",
-        footerTag: "Globales FPV-Pilotenverzeichnis",
+        ctaTitle: "Projekt im Aufbau — noch nicht vollständig gestartet.",
+        ctaDesc: "PILOTSFPV.COM befindet sich derzeit in aktiver Entwicklung als globale Plattform.",
+        footerTag: "Unterstützt und betrieben von",
         privacy: "Datenschutz",
-        terms: "AGB",
-        msgSuccess: "Sie sind auf der Liste. Wir melden uns.",
-        msgError: "Fehler aufgetreten. Bitte überprüfen Sie Ihre E-Mail."
+        terms: "AGB"
       },
       fr: {
-        badge: "ANNUAIRE MONDIAL DE PILOTES FPV",
+        badge: "PROJET EN DÉVELOPPEMENT",
         h1: 'Trouvez des pilotes <span class="mint-text">FPV</span>.<br>Partout dans le monde.',
-        lead: "Un réseau mondial de pilotes FPV professionnels pour l'industrie, le cinéma et la sécurité.",
-        inputPlaceholder: "Votre adresse e-mail",
-        btnSubmit: "REJOINDRE LA LISTE →",
-        note: 'Accès anticipé pour pilotes et entreprises. <a href="#privacy">Politique de confidentialité</a>',
+        lead: "Un nouveau projet international est en cours de développement — un annuaire et réseau mondial reliant les pilotes FPV au cinéma et à l'industrie.",
         strip1: "RÉSEAU MONDIAL",
         strip2: "PILOTES PROS",
         strip3: "PRÊT POUR L'INDUSTRIE",
@@ -811,27 +650,21 @@
         card1Title: "INDUSTRIE",
         card1Desc: "Inspection, construction, infrastructure et fabrication.",
         card2Title: "CINÉMA",
-        card2Desc: "FPV cinématographique, perspectives dynamiques et production commerciale.",
+        card2Desc: "FPV cinématographique, perspectives dynamiques et production commercial.",
         card3Title: "SÉCURITÉ",
         card3Desc: "Pilotes professionnels pour la surveillance et opérations spécialisées.",
         card4Title: "COMMUNAUTÉ MONDIALE",
         card4Desc: "Connectez-vous avec des pilotes FPV professionnels du monde entier.",
-        ctaTitle: "Faites partie du réseau FPV mondial.",
-        ctaDesc: "Rejoignez la liste d'attente pour être informé du lancement.",
-        ctaNote: "Soyez parmi les premiers.",
-        footerTag: "Annuaire mondial de pilotes FPV",
+        ctaTitle: "Projet en cours de construction.",
+        ctaDesc: "PILOTSFPV.COM est actuellement en cours de développement en tant que plateforme mondiale.",
+        footerTag: "Propulsé et géré par",
         privacy: "Confidentialité",
-        terms: "Conditions",
-        msgSuccess: "Vous êtes inscrit. Nous vous contacterons.",
-        msgError: "Erreur. Veuillez vérifier votre e-mail."
+        terms: "Conditions"
       },
       es: {
-        badge: "DIRECTORIO GLOBAL DE PILOTOS FPV",
+        badge: "PROYECTO EN DESARROLLO",
         h1: 'Encuentra pilotos <span class="mint-text">FPV</span>.<br>En cualquier lugar del mundo.',
-        lead: "Una red global de pilotos FPV profesionales para la industria, el cine y la seguridad.",
-        inputPlaceholder: "Tu correo electrónico",
-        btnSubmit: "UNIRSE A LA LISTA →",
-        note: 'Acceso anticipado para pilotos y empresas. <a href="#privacy">Política de privacidad</a>',
+        lead: "Un nuevo proyecto internacional está en desarrollo: creando un directorio y red global que conecta a pilotos FPV con el cine y la industria.",
         strip1: "RED GLOBAL",
         strip2: "PILOTOS PROFESIONALES",
         strip3: "LISTO PARA LA INDUSTRIA",
@@ -846,22 +679,16 @@
         card3Desc: "Pilotos profesionales para vigilancia y operaciones especializadas.",
         card4Title: "COMUNIDAD GLOBAL",
         card4Desc: "Conéctate con pilotos FPV profesionales de todo el mundo.",
-        ctaTitle: "Sé parte de la red FPV global.",
-        ctaDesc: "Únete a la lista de espera para saber cuándo lanzamos.",
-        ctaNote: "Sé de los primeros.",
-        footerTag: "Directorio global de pilotos FPV",
+        ctaTitle: "El proyecto se está construyendo.",
+        ctaDesc: "PILOTSFPV.COM se encuentra actualmente en desarrollo activo como plataforma global.",
+        footerTag: "Desarrollado y operado por",
         privacy: "Privacidad",
-        terms: "Términos",
-        msgSuccess: "Estás en la lista. Estaremos en contacto.",
-        msgError: "Ocurrió un error. Comprueba tu correo."
+        terms: "Términos"
       },
       it: {
-        badge: "DIRECTORY GLOBALE PILOTI FPV",
+        badge: "PROGETTO IN SVILUPPO",
         h1: 'Trova piloti <span class="mint-text">FPV</span>.<br>In tutto il mondo.',
-        lead: "Una rete globale di piloti FPV professionisti per l'industria, il cinema e la sicurezza.",
-        inputPlaceholder: "Il tuo indirizzo e-mail",
-        btnSubmit: "UNISCITI ALLA LISTA →",
-        note: 'Accesso anticipato per piloti e aziende. <a href="#privacy">Privacy</a>',
+        lead: "Un nuovo progetto internazionale è in fase di sviluppo — un database e network globale per collegare i piloti FPV con cinema e industria.",
         strip1: "RETE GLOBALE",
         strip2: "PILOTI PRO",
         strip3: "PRONTO PER L'INDUSTRIA",
@@ -876,22 +703,16 @@
         card3Desc: "Piloti professionisti per monitoraggio e operazioni speciali.",
         card4Title: "COMMUNITY GLOBALE",
         card4Desc: "Connettiti con piloti FPV professionisti in tutto il mondo.",
-        ctaTitle: "Entra a far parte della rete FPV globale.",
-        ctaDesc: "Iscriviti alla lista d'attesa per scoprire il lancio.",
-        ctaNote: "Sii tra i primi.",
-        footerTag: "Directory globale piloti FPV",
+        ctaTitle: "Il progetto è in fase di realizzazione.",
+        ctaDesc: "PILOTSFPV.COM è attualmente in fase di sviluppo come piattaforma globale.",
+        footerTag: "Sviluppato e gestito da",
         privacy: "Privacy Policy",
-        terms: "Termini",
-        msgSuccess: "Sei nella lista. Ti contatteremo presto.",
-        msgError: "Si è verificato un errore. Controlla la mail."
+        terms: "Termini"
       },
       pl: {
-        badge: "GLOBALNY KATALOG PILOTÓW FPV",
+        badge: "PROJEKT W BUDOWIE",
         h1: 'Znajdź pilotów <span class="mint-text">FPV</span>.<br>Gdziekolwiek na świecie.',
-        lead: "Jedna globalna sieć profesjonalnych pilotów FPV dla przemysłu, filmu i bezpieczeństwa.",
-        inputPlaceholder: "Twój adres e-mail",
-        btnSubmit: "DOŁĄCZ DO LISTY →",
-        note: 'Wczesny dostęp dla pilotów i firm. <a href="#privacy">Polityka prywatności</a>',
+        lead: "Powstaje nowy międzynarodowy projekt — globalna baza i sieć łącząca pilotów FPV z branżą filmową, przemysłem i bezpieczeństwem.",
         strip1: "GLOBALNA SIEĆ",
         strip2: "PROFESJONALNI PILOCI",
         strip3: "GOTOWE DLA PRZEMYSŁU",
@@ -906,22 +727,16 @@
         card3Desc: "Profesjonalni piloci do monitoringu i operacji specjalnych.",
         card4Title: "SPOŁECZNOŚĆ GLOBALNA",
         card4Desc: "Łącz się z profesjonalnymi pilotami FPV na całym świecie.",
-        ctaTitle: "Bądź częścią globalnej sieci FPV.",
-        ctaDesc: "Dołącz do listy oczekujących i dowiedz się o starcie serwisu.",
-        ctaNote: "Bądź wśród pierwszych.",
-        footerTag: "Globalny katalog pilotów FPV",
+        ctaTitle: "Projekt w trakcie realizacji.",
+        ctaDesc: "PILOTSFPV.COM jest obecnie w fazie rozwoju jako globalna platforma.",
+        footerTag: "Stworzone i obsługiwane przez",
         privacy: "Prywatność",
-        terms: "Regulamin",
-        msgSuccess: "Jesteś na liście. Będziemy w kontakcie.",
-        msgError: "Coś poszło nie tak. Sprawdź e-mail."
+        terms: "Regulamin"
       },
       pt: {
-        badge: "DIRETÓRIO GLOBAL DE PILOTOS FPV",
+        badge: "PROJETO EM DESENVOLVIMENTO",
         h1: 'Encontre pilotos <span class="mint-text">FPV</span>.<br>Em qualquer lugar do mundo.',
-        lead: "Uma rede global de pilotos FPV profissionais para indústria, cinema e segurança.",
-        inputPlaceholder: "Seu e-mail",
-        btnSubmit: "ENTRAR NA LISTA →",
-        note: 'Acesso antecipado para pilotos e empresas. <a href="#privacy">Privacidade</a>',
+        lead: "Um novo projeto internacional está em desenvolvimento — criando um diretório e rede global para conectar pilotos FPV ao cinema e à indústria.",
         strip1: "REDE GLOBAL",
         strip2: "PILOTOS PRO",
         strip3: "PRONTO PARA A INDÚSTRIA",
@@ -936,22 +751,16 @@
         card3Desc: "Pilotos profissionais para monitoramento e operações especiais.",
         card4Title: "COMUNIDADE GLOBAL",
         card4Desc: "Conecte-se com pilotos FPV profissionais em todo o mundo.",
-        ctaTitle: "Faça parte da rede FPV global.",
-        ctaDesc: "Entre na lista de espera para saber o lançamento.",
-        ctaNote: "Seja um dos primeiros.",
-        footerTag: "Diretório global de pilotos FPV",
+        ctaTitle: "O projeto está sendo construído.",
+        ctaDesc: "PILOTSFPV.COM está atualmente em desenvolvimento ativo como uma plataforma global.",
+        footerTag: "Desenvolvido e operado por",
         privacy: "Privacidade",
-        terms: "Termos",
-        msgSuccess: "Você está na lista. Entraremos em contato.",
-        msgError: "Ocorreu um erro. Verifique seu e-mail."
+        terms: "Termos"
       },
       zh: {
-        badge: "全球 FPV 飞手名录",
+        badge: "项目开发中",
         h1: '寻找专业 <span class="mint-text">FPV</span> 飞手。<br>涵盖全球各个角落。',
         lead: "连接工业巡检、影视航拍、安防维稳等领域的全球专业 FPV 飞手网络。",
-        inputPlaceholder: "输入您的电子邮箱",
-        btnSubmit: "加入候补名单 →",
-        note: '飞手与企业早期优先体验。 <a href="#privacy">隐私政策</a>',
         strip1: "全球网络",
         strip2: "专业飞手",
         strip3: "工业级标准",
@@ -966,22 +775,16 @@
         card3Desc: "面向监控、巡逻及特种作业的专业飞手。",
         card4Title: "全球社区",
         card4Desc: "对接全球专业 FPV 飞手与真实项目需求。",
-        ctaTitle: "成为全球 FPV 网络的一部分。",
-        ctaDesc: "加入 Waitlist，第一时间获取 PILOTSFPV.COM 上线通知。",
-        ctaNote: "成为首批体验者。",
-        footerTag: "全球 FPV 飞手名录",
+        ctaTitle: "项目正在建设中 — 尚未完全上线。",
+        ctaDesc: "PILOTSFPV.COM 目前正在作为连接全球 FPV 飞手和工业合作伙伴的平台进行开发。",
+        footerTag: "由 fpvvideo.cz 运营",
         privacy: "隐私政策",
-        terms: "服务条款",
-        msgSuccess: "您已成功加入名单，我们将保持联系。",
-        msgError: "提交失败，请检查邮箱后重试。"
+        terms: "服务条款"
       },
       ja: {
-        badge: "世界 FPV パイロットディレクトリ",
+        badge: "開発中のプロジェクト",
         h1: '<span class="mint-text">FPV</span> パイロットを検索。<br>世界中のどこからでも。',
-        lead: "産業、映画撮影、警備などの分野で活躍するプロの FPV パイロットを結ぶ世界規模の基盤。",
-        inputPlaceholder: "メールアドレスを入力",
-        btnSubmit: "ウェイティングリストに登録 →",
-        note: 'パイロットおよび企業向けの早期アクセス。 <a href="#privacy">プライバシーポリシー</a>',
+        lead: "新しい国際プロジェクトが始動しました。プロの FPV パイロットと映像制作、産業利用、防衛を結ぶ世界規模のネットワークを構築しています。",
         strip1: "グローバルネットワーク",
         strip2: "プロパイロット",
         strip3: "産業対応",
@@ -996,22 +799,16 @@
         card3Desc: "監視や特殊運用に対応するプロパイロット。",
         card4Title: "グローバルコミュニティ",
         card4Desc: "世界中のプロ FPV パイロットとプロジェクトを接続。",
-        ctaTitle: "世界 FPV ネットワークに参加しましょう。",
-        ctaDesc: "事前登録してローンチ情報を受け取りましょう。",
-        ctaNote: "イチ早く情報を入手。",
-        footerTag: "世界 FPV パイロットディレクトリ",
+        ctaTitle: "プロジェクトは現在構築中です。",
+        ctaDesc: "PILOTSFPV.COM は世界中の FPV パイロットを繋ぐプラットフォームとして現在開発を進めています。",
+        footerTag: "運営・提供：",
         privacy: "プライバシーポリシー",
-        terms: "利用規約",
-        msgSuccess: "登録が完了しました。連絡をお待ちください。",
-        msgError: "エラーが発生しました。メールアドレスをご確認ください。"
+        terms: "利用規約"
       },
       ko: {
-        badge: "글로벌 FPV 파일럿 디렉토리",
+        badge: "프로젝트 개발 중",
         h1: '전 세계 어디서나<br><span class="mint-text">FPV</span> 파일럿을 찾으세요.',
-        lead: "산업, 영화, 보안 분야의 전문 FPV 파일럿을 연결하는 하나의 글로벌 네트워크.",
-        inputPlaceholder: "이메일 주소 입력",
-        btnSubmit: "대기열 등록 →",
-        note: '파일럿 및 기업을 위한 사전 등록. <a href="#privacy">개인정보 처리방침</a>',
+        lead: "새로운 국제 프로젝트가 개발 중입니다. 전문 FPV 파일럿을 영화 제작, 산업 점검, 보안과 연결하는 통합 네트워크를 구축합니다.",
         strip1: "글로벌 네트워크",
         strip2: "전문 파일럿",
         strip3: "산업 규격",
@@ -1026,14 +823,11 @@
         card3Desc: "모니터링, 수색 및 특수 운용을 위한 전문 파일럿.",
         card4Title: "글로벌 커뮤니티",
         card4Desc: "전 세계 전문 FPV 파일럿과 실제 프로젝트 연결.",
-        ctaTitle: "글로벌 FPV 네트워크의 일원이 되세요.",
-        ctaDesc: "웨이트리스트에 등록하고 가장 먼저 출시 소식을 받아보세요.",
-        ctaNote: "가장 먼저 시작하세요.",
-        footerTag: "글로벌 FPV 파일럿 디렉토리",
+        ctaTitle: "프로젝트 준비 중입니다.",
+        ctaDesc: "PILOTSFPV.COM은 현재 글로벌 FPV 파일럿 플랫폼으로 활발히 개발 중입니다.",
+        footerTag: "운영 및 제공:",
         privacy: "개인정보 처리방침",
-        terms: "이용약관",
-        msgSuccess: "등록되었습니다. 곧 연락드리겠습니다.",
-        msgError: "오류가 발생했습니다. 이메일을 확인해주세요."
+        terms: "이용약관"
       }
     };
 
@@ -1045,19 +839,16 @@
 
       // Update Active Button Style
       document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.classList.toggle('active', btn.innerText.toLowerCase() === lang);
+        const btnLang = btn.innerText.toLowerCase() === 'cz' ? 'cs' : btn.innerText.toLowerCase();
+        btn.classList.toggle('active', btnLang === lang);
       });
 
       const t = i18n[lang];
 
       // Update Text Elements
-      document.getElementById('txt-badge').innerHTML = t.badge;
+      document.getElementById('txt-badge').innerText = t.badge;
       document.getElementById('txt-h1').innerHTML = t.h1;
       document.getElementById('txt-lead').innerText = t.lead;
-      
-      document.getElementById('input-email-hero').placeholder = t.inputPlaceholder;
-      document.getElementById('btn-submit-hero').innerText = t.btnSubmit;
-      document.getElementById('txt-note').innerHTML = t.note;
 
       document.getElementById('txt-strip-1').innerText = t.strip1;
       document.getElementById('txt-strip-2').innerText = t.strip2;
@@ -1078,83 +869,12 @@
 
       document.getElementById('txt-cta-title').innerText = t.ctaTitle;
       document.getElementById('txt-cta-desc').innerText = t.ctaDesc;
-      document.getElementById('input-email-bottom').placeholder = t.inputPlaceholder;
-      document.getElementById('btn-submit-bottom').innerText = t.btnSubmit;
-      document.getElementById('txt-note-bottom').innerText = t.ctaNote;
 
       document.getElementById('txt-footer-tag').innerText = t.footerTag;
       document.getElementById('txt-privacy').innerText = t.privacy;
       document.getElementById('txt-terms').innerText = t.terms;
 
       document.documentElement.lang = lang;
-    }
-
-    // WAITLIST FORM API SUBMISSION HANDLER
-    async function handleWaitlistSubmit(event, formId) {
-      event.preventDefault();
-      
-      const form = document.getElementById(formId);
-      const emailInput = form.querySelector('input[name="email"]');
-      const honeypot = form.querySelector('input[name="website_check"]').value;
-      const btn = form.querySelector('button[type="submit"]');
-      const msgDivId = formId === 'heroWaitlistForm' ? 'hero-msg' : 'bottom-msg';
-      const msgDiv = document.getElementById(msgDivId);
-
-      const t = i18n[currentLang] || i18n.en;
-
-      // Honeypot Bot check
-      if (honeypot) {
-        return false;
-      }
-
-      const email = emailInput.value.trim();
-      
-      // Basic Email Regex
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(email)) {
-        msgDiv.innerText = t.msgError;
-        msgDiv.className = "form-message error";
-        return;
-      }
-
-      // UI Loading state
-      btn.disabled = true;
-      const originalBtnText = btn.innerText;
-      btn.innerText = "...";
-      msgDiv.style.display = "none";
-
-      try {
-        const response = await fetch('/api/waitlist', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            email: email,
-            lang: currentLang,
-            source: formId
-          })
-        });
-
-        if (response.ok) {
-          msgDiv.innerText = t.msgSuccess;
-          msgDiv.className = "form-message success";
-          emailInput.value = '';
-        } else {
-          const resData = await response.json().catch(() => ({}));
-          msgDiv.innerText = resData.message || t.msgError;
-          msgDiv.className = "form-message error";
-        }
-      } catch (err) {
-        // Fallback for demo / offline environment where endpoint does not respond yet
-        console.warn("Backend API endpoint not available:", err);
-        msgDiv.innerText = t.msgSuccess;
-        msgDiv.className = "form-message success";
-        emailInput.value = '';
-      } finally {
-        btn.disabled = false;
-        btn.innerText = originalBtnText;
-      }
     }
   </script>
 </body>
