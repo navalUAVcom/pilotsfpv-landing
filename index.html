@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pilots FPV — Global FPV Directory & Community</title>
-  <meta name="description" content="International directory and platform connecting FPV pilots, cinema, industry, and autonomous hardware.">
+  <title>Pilots FPV — International Directory & Platform</title>
+  <meta name="description" content="A new international platform and global directory connecting FPV pilots across film, industry, security, and autonomous systems.">
   <link rel="canonical" href="https://pilotsfpv.com/">
   
-  <!-- Open Graph -->
   <meta property="og:title" content="Pilots FPV — Global FPV Platform">
   <meta property="og:description" content="Connecting FPV pilots, industrial applications, cinematographers, and security hardware worldwide.">
   <meta property="og:type" content="website">
@@ -15,22 +14,25 @@
 
   <style>
     :root {
-      --bg: #121214;
-      --card-bg: #1a1a1e;
-      --border: #2a2a30;
+      --bg: #0b0d10;
+      --card-bg: #13171f;
+      --border: #202736;
+      --border-accent: rgba(163, 255, 230, 0.25);
       --text: #ffffff;
-      --text-muted: #a0a0a5;
-      --accent-green: #00FF88;
+      --text-muted: #94a3b8;
       --accent-mint: #A3FFE6;
-      --accent-silver: #d1f7ec;
+      --accent-cyan: #38bdf8;
       --mint-glow: rgba(163, 255, 230, 0.12);
-      --gradient-accent: linear-gradient(135deg, #00FF88 0%, #A3FFE6 100%);
+      --gradient-mint: linear-gradient(135deg, #A3FFE6 0%, #38bdf8 100%);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       background-color: var(--bg);
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(163, 255, 230, 0.08) 0%, transparent 60%),
+        radial-gradient(circle at 80% 100%, rgba(56, 189, 248, 0.05) 0%, transparent 50%);
       color: var(--text);
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       min-height: 100vh;
@@ -38,28 +40,25 @@
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
-      padding: 1.5rem 1rem;
+      padding: 2rem 1.5rem;
     }
 
     header {
       width: 100%;
-      max-width: 800px;
+      max-width: 760px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding-bottom: 2rem;
     }
 
     .logo {
-      font-size: 1.3rem;
+      font-size: 1.25rem;
       font-weight: 800;
-      letter-spacing: 1px;
+      letter-spacing: 2px;
       color: var(--text);
     }
-    
-    /* Stříbřitě mentolový přechod pro akcent loga */
     .logo span { 
-      background: var(--gradient-accent);
+      background: var(--gradient-mint);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -68,15 +67,17 @@
       background: var(--card-bg);
       color: var(--text);
       border: 1px solid var(--border);
-      padding: 0.45rem 0.8rem;
-      border-radius: 8px;
+      padding: 0.5rem 0.9rem;
+      border-radius: 10px;
       font-size: 0.85rem;
+      font-weight: 500;
       cursor: pointer;
       outline: none;
-      transition: border-color 0.2s;
+      transition: all 0.2s ease;
     }
     .lang-select:hover {
       border-color: var(--accent-mint);
+      box-shadow: 0 0 12px var(--mint-glow);
     }
 
     main {
@@ -84,81 +85,87 @@
       width: 100%;
       text-align: center;
       margin: auto 0;
+      padding: 3rem 0;
     }
 
-    /* Odznak s mentolovo-stříbrným přechodem */
     .badge {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
       background: var(--mint-glow);
       color: var(--accent-mint);
-      border: 1px solid rgba(163, 255, 230, 0.3);
-      padding: 0.4rem 1rem;
-      border-radius: 20px;
+      border: 1px solid var(--border-accent);
+      padding: 0.4rem 1.1rem;
+      border-radius: 50px;
       font-size: 0.78rem;
       font-weight: 700;
       letter-spacing: 1.5px;
       text-transform: uppercase;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 0 15px rgba(163, 255, 230, 0.05);
+      margin-bottom: 1.8rem;
+      box-shadow: 0 0 20px rgba(163, 255, 230, 0.08);
+    }
+
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      background-color: var(--accent-mint);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--accent-mint);
     }
 
     h1 {
-      font-size: 2.6rem;
+      font-size: 2.7rem;
       font-weight: 800;
       line-height: 1.15;
+      letter-spacing: -0.02em;
       margin-bottom: 1.2rem;
-      background: linear-gradient(180deg, #FFFFFF 60%, var(--accent-silver) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: #ffffff;
     }
 
     p.lead {
       color: var(--text-muted);
       font-size: 1.12rem;
-      line-height: 1.6;
-      margin-bottom: 2.2rem;
+      line-height: 1.65;
+      margin-bottom: 2.5rem;
     }
 
-    .form-wrapper {
+    .card {
       background: var(--card-bg);
       border: 1px solid var(--border);
-      border-radius: 12px;
+      border-radius: 16px;
       padding: 2rem;
-      margin-bottom: 2rem;
+      text-align: center;
       position: relative;
       overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     }
-    
-    .form-wrapper::before {
+
+    .card::before {
       content: "";
       position: absolute;
       top: 0; left: 0; right: 0;
       height: 2px;
-      background: var(--gradient-accent);
+      background: var(--gradient-mint);
     }
 
-    .form-placeholder {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
+    .card-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.5rem;
     }
 
-    .pulse-dot {
-      width: 8px;
-      height: 8px;
-      background-color: var(--accent-green);
-      border-radius: 50%;
-      box-shadow: 0 0 10px var(--accent-green);
+    .card-subtitle {
+      font-size: 0.88rem;
+      color: var(--accent-mint);
+      font-weight: 500;
+      letter-spacing: 0.5px;
     }
 
     footer {
       width: 100%;
-      max-width: 800px;
-      margin-top: 3rem;
-      padding-top: 1.5rem;
+      max-width: 760px;
+      padding-top: 2rem;
       border-top: 1px solid var(--border);
       color: var(--text-muted);
       font-size: 0.85rem;
@@ -173,8 +180,8 @@
       transition: color 0.2s;
     }
     footer a:hover { 
-      color: var(--accent-green);
-      text-decoration: underline; 
+      color: #ffffff;
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -197,20 +204,20 @@
   </header>
 
   <main>
-    <span class="badge" id="badgeText">Global Directory</span>
-    <h1 id="headingText">The International Home for FPV Pilots</h1>
+    <div class="badge">
+      <span class="badge-dot"></span>
+      <span id="badgeText">Project Under Development</span>
+    </div>
+    
+    <h1 id="headingText">Building the Global Platform for FPV Pilots</h1>
+    
     <p class="lead" id="leadText">
-      Building the global directory and network connecting professional FPV pilots across film, industry, security, and autonomous hardware.
+      A new international project is under development — creating a unified global directory and network connecting professional FPV pilots across film production, industrial inspection, defense, and autonomous systems.
     </p>
 
-    <div class="form-wrapper">
-      <!-- MÍSTO PRO BUDOUCÍ EMBED KÓD MAILERLITE -->
-      <div class="form-placeholder">
-        <div style="display: flex; align-items: center; gap: 8px;">
-          <span class="pulse-dot"></span>
-          <span id="formStatusText">Early access & directory registration opening soon</span>
-        </div>
-      </div>
+    <div class="card">
+      <div class="card-title" id="cardTitleText">International FPV Directory & Network</div>
+      <div class="card-subtitle" id="cardSubText">Cinema • Industry • Defense • Autonomous Systems</div>
     </div>
   </main>
 
@@ -219,76 +226,85 @@
   </footer>
 
   <script>
-    // Překladatelská databáze pro 10 jazyků
     const translations = {
       en: {
-        badge: "Global FPV Directory",
-        heading: "The International Home for FPV Pilots",
-        lead: "Building the global directory and platform connecting FPV pilots with film production, industry, and autonomous systems.",
-        formStatus: "Directory registration & newsletter opening soon",
+        badge: "Project Under Development",
+        heading: "Building the Global Platform for FPV Pilots",
+        lead: "A new international project is under development — creating a unified global directory and network connecting professional FPV pilots across film production, industrial inspection, defense, and autonomous systems.",
+        cardTitle: "International FPV Directory & Network",
+        cardSub: "Cinema • Industry • Defense • Autonomous Systems",
         footer: "Powered and operated by"
       },
       cs: {
-        badge: "Mezinárodní Databáze FPV Pilotů",
-        heading: "Celosvětový domov pro FPV piloty",
-        lead: "Zde vzniká globální databáze a platforma propojující FPV piloty s filmovou produkcí, průmyslem a autonomními systémy.",
-        formStatus: "Registrace do databáze a e-mailový zpravodaj spouštíme již brzy",
+        badge: "Projekt ve vývoji",
+        heading: "Vzniká globální platforma pro FPV piloty",
+        lead: "Na tomto místě vzniká nový mezinárodní projekt — jednotná globální databáze a síť propojující profesionální FPV piloty s filmovou produkcí, průmyslem, bezpečností a autonomními technologiemi.",
+        cardTitle: "Mezinárodní databáze a síť FPV pilotů",
+        cardSub: "Filmová produkce • Průmysl • Bezpečnost • Autonomní systémy",
         footer: "Za projektem stojí a provozuje"
       },
       de: {
-        badge: "Globales FPV-Verzeichnis",
-        heading: "Das internationale Zuhause für FPV-Piloten",
-        lead: "Hier entsteht die globale Datenbank und Plattform zur Vernetzung von FPV-Piloten mit Filmproduktion, Industrie und autonomen Systemen.",
-        formStatus: "Registrierung für die Datenbank öffnet in Kürze",
+        badge: "Projekt in Entwicklung",
+        heading: "Aufbau der globalen Plattform für FPV-Piloten",
+        lead: "Hier entsteht ein neues internationales Projekt — ein globales Verzeichnis und Netzwerk zur Vernetzung von FPV-Piloten mit Filmproduktion, Industrie, Sicherheit und autonomen Systemen.",
+        cardTitle: "Internationales FPV-Verzeichnis & Netzwerk",
+        cardSub: "Kino • Industrie • Sicherheit • Autonome Systeme",
         footer: "Betrieben und unterstützt von"
       },
       fr: {
-        badge: "Annuaire Mondial FPV",
-        heading: "La maison internationale des pilotes FPV",
-        lead: "Création de la base de données mondiale reliant les pilotes FPV au cinéma, à l'industrie et aux systèmes autonomes.",
-        formStatus: "Ouverture prochaine des inscriptions à l'annuaire",
+        badge: "Projet en Développement",
+        heading: "Création de la plateforme mondiale pour pilotes FPV",
+        lead: "Un nouveau projet international est en cours de développement — un annuaire et réseau mondial reliant les pilotes FPV au cinéma, à l'industrie et aux systèmes autonomes.",
+        cardTitle: "Annuaire et Réseau Mondial FPV",
+        cardSub: "Cinéma • Industrie • Sécurité • Systèmes Autonomes",
         footer: "Propulsé et géré par"
       },
       es: {
-        badge: "Directorio Global FPV",
-        heading: "El hogar internacional para pilotos de FPV",
-        lead: "Creando la base de datos global y la plataforma que conecta a pilotos de FPV con la industria cinematográfica y sistemas autónomos.",
-        formStatus: "Registro en el directorio disponible próximamente",
+        badge: "Proyecto en Desarrollo",
+        heading: "Construyendo la plataforma global para pilotos FPV",
+        lead: "Un nuevo proyecto internacional está en desarrollo: creando un directorio y red global que conecta a pilotos FPV con el cine, la industria y los sistemas autónomos.",
+        cardTitle: "Directorio y Red Internacional FPV",
+        cardSub: "Cine • Industria • Seguridad • Sistemas Autónomos",
         footer: "Desarrollado y operado por"
       },
       it: {
-        badge: "Directory Globale FPV",
-        heading: "La casa internazionale per i piloti FPV",
-        lead: "Creazione del database globale e della piattaforma che collega i piloti FPV con la produzione cinematografica, l'industria e i sistemi autonomi.",
-        formStatus: "Apertura iscrizioni al database a breve",
+        badge: "Progetto in Sviluppo",
+        heading: "Creazione della piattaforma globale per piloti FPV",
+        lead: "Un nuovo progetto internazionale è in fase di sviluppo — un database e network globale per collegare i piloti FPV con cinema, industria e sistemi autonomi.",
+        cardTitle: "Directory e Network Internazionale FPV",
+        cardSub: "Cinema • Industria • Sicurezza • Sistemi Autonomi",
         footer: "Sviluppato e gestito da"
       },
       ja: {
-        badge: "グローバル FPV ディレクトリ",
-        heading: "FPVパイロットのための国際プラットフォーム",
-        lead: "FPVパイロットと映像制作、産業利用、自律型システムを結ぶ世界規模のデータベースを構築中。",
-        formStatus: "データベース登録受付は間もなく開始",
+        badge: "開発中のプロジェクト",
+        heading: "FPVパイロットのための世界プラットフォームを構築中",
+        lead: "新しい国際プロジェクトが始動しました。プロのFPVパイロットと映像制作、産業利用、防衛、自律型 systems を結ぶ世界規模のネットワークを構築しています。",
+        cardTitle: "国際 FPV ディレクトリ & ネットワーク",
+        cardSub: "映画撮影 • 産業利用 • 防衛 • 自律型 systems",
         footer: "運営・提供："
       },
       pt: {
-        badge: "Diretório Global FPV",
-        heading: "O lar internacional para pilotos de FPV",
-        lead: "Construindo o diretório global e a plataforma que conecta pilotos de FPV com a indústria cinematográfica e sistemas autónomos.",
-        formStatus: "Inscrições no diretório em breve",
+        badge: "Projeto em Desenvolvimento",
+        heading: "Construindo a plataforma global para pilotos FPV",
+        lead: "Um novo projeto internacional está em desenvolvimento — criando um diretório e rede global para conectar pilotos FPV ao cinema, à indústria e a sistemas autónomos.",
+        cardTitle: "Diretório e Rede Internacional FPV",
+        cardSub: "Cinema • Indústria • Segurança • Sistemas Autónomos",
         footer: "Desenvolvido e operado por"
       },
       pl: {
-        badge: "Globalny Katalog FPV",
-        heading: "Międzynarodowy dom dla pilotów FPV",
-        lead: "Tworzymy globalną bazę danych i platformę łączącą pilotów FPV z branżą filmową, przemysłem i systemami autonomicznymi.",
-        formStatus: "Rejestracja w katalogu wkrótce dostępna",
+        badge: "Projekt w Budowie",
+        heading: "Tworzymy globalną platformę dla pilotów FPV",
+        lead: "Powstaje nowy międzynarodowy projekt — globalna baza i sieć łącząca pilotów FPV z branżą filmową, przemysłem, bezpieczeństwem i systemami autonomicznymi.",
+        cardTitle: "Międzynarodowy Katalog i Sieć FPV",
+        cardSub: "Kino • Przemysł • Bezpieczeństwo • Systemy Autonomiczne",
         footer: "Stworzone i obsługiwane przez"
       },
       zh: {
-        badge: "全球 FPV 飞手目录",
-        heading: "全球 FPV 飞手的国际家园",
-        lead: "正在构建连接 FPV 飞手与影视航拍、工业应用及自主系统的全球数据库与平台。",
-        formStatus: "目录注册即将开放",
+        badge: "项目开发中",
+        heading: "构建全球 FPV 飞手国际平台",
+        lead: "一个新的国际项目正在开发中 — 打造统一的全球目录与网络，连接专业 FPV 飞手与影视航拍、工业巡检、安防及自主系统。",
+        cardTitle: "国际 FPV 目录与网络",
+        cardSub: "影视航拍 • 工业应用 • 安防 • 自主系统",
         footer: "由 fpvvideo.cz 运营"
       }
     };
@@ -299,22 +315,17 @@
       document.getElementById('badgeText').innerText = translations[lang].badge;
       document.getElementById('headingText').innerText = translations[lang].heading;
       document.getElementById('leadText').innerText = translations[lang].lead;
-      document.getElementById('formStatusText').innerText = translations[lang].formStatus;
+      document.getElementById('cardTitleText').innerText = translations[lang].cardTitle;
+      document.getElementById('cardSubText').innerText = translations[lang].cardSub;
       document.getElementById('footerText').innerText = translations[lang].footer;
       
       document.documentElement.lang = lang;
-      localStorage.setItem('preferredLang', lang);
     }
 
-    // Automatická detekce jazyka prohlížeče nebo z uložené preference
+    // Výchozí zobrazení je Angličtina
     document.addEventListener("DOMContentLoaded", function() {
-      const savedLang = localStorage.getItem('preferredLang');
-      const browserLang = navigator.language ? navigator.language.split('-')[0] : 'en';
-      
-      let targetLang = savedLang || (translations[browserLang] ? browserLang : 'en');
-      
-      document.getElementById('langSelect').value = targetLang;
-      changeLanguage(targetLang);
+      document.getElementById('langSelect').value = 'en';
+      changeLanguage('en');
     });
   </script>
 
