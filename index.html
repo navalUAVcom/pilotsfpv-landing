@@ -3,23 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pilots FPV — Global FPV Directory & Community Waitlist</title>
-  <meta name="description" content="Join the global FPV platform connecting pilots, industry, cinema, and autonomous hardware. Sign up for early access.">
+  <title>Pilots FPV — Global FPV Directory & Community</title>
+  <meta name="description" content="International directory and platform connecting FPV pilots, cinema, industry, and autonomous hardware.">
   <link rel="canonical" href="https://pilotsfpv.com/">
   
-  <!-- Hreflang SEO architektura pro 10 jazyků -->
-  <link rel="alternate" hreflang="x-default" href="https://pilotsfpv.com/" />
-  <link rel="alternate" hreflang="en" href="https://pilotsfpv.com/" />
-  <link rel="alternate" hreflang="zh" href="https://pilotsfpv.com/zh/" />
-  <link rel="alternate" hreflang="es" href="https://pilotsfpv.com/es/" />
-  <link rel="alternate" hreflang="de" href="https://pilotsfpv.com/de/" />
-  <link rel="alternate" hreflang="fr" href="https://pilotsfpv.com/fr/" />
-  <link rel="alternate" hreflang="it" href="https://pilotsfpv.com/it/" />
-  <link rel="alternate" hreflang="ja" href="https://pilotsfpv.com/ja/" />
-  <link rel="alternate" hreflang="pt" href="https://pilotsfpv.com/pt/" />
-  <link rel="alternate" hreflang="pl" href="https://pilotsfpv.com/pl/" />
-  <link rel="alternate" hreflang="cs" href="https://pilotsfpv.com/cs/" />
-
   <!-- Open Graph -->
   <meta property="og:title" content="Pilots FPV — Global FPV Platform">
   <meta property="og:description" content="Connecting FPV pilots, industrial applications, cinematographers, and security hardware worldwide.">
@@ -33,8 +20,11 @@
       --border: #2a2a30;
       --text: #ffffff;
       --text-muted: #a0a0a5;
-      --accent: #00FF88;
-      --accent-glow: rgba(0, 255, 136, 0.15);
+      --accent-green: #00FF88;
+      --accent-mint: #A3FFE6;
+      --accent-silver: #d1f7ec;
+      --mint-glow: rgba(163, 255, 230, 0.12);
+      --gradient-accent: linear-gradient(135deg, #00FF88 0%, #A3FFE6 100%);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -66,16 +56,27 @@
       letter-spacing: 1px;
       color: var(--text);
     }
-    .logo span { color: var(--accent); }
+    
+    /* Stříbřitě mentolový přechod pro akcent loga */
+    .logo span { 
+      background: var(--gradient-accent);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
 
     .lang-select {
       background: var(--card-bg);
       color: var(--text);
       border: 1px solid var(--border);
-      padding: 0.4rem 0.8rem;
-      border-radius: 6px;
+      padding: 0.45rem 0.8rem;
+      border-radius: 8px;
       font-size: 0.85rem;
       cursor: pointer;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .lang-select:hover {
+      border-color: var(--accent-mint);
     }
 
     main {
@@ -85,32 +86,37 @@
       margin: auto 0;
     }
 
+    /* Odznak s mentolovo-stříbrným přechodem */
     .badge {
       display: inline-block;
-      background: var(--accent-glow);
-      color: var(--accent);
-      border: 1px solid var(--accent);
-      padding: 0.35rem 0.9rem;
+      background: var(--mint-glow);
+      color: var(--accent-mint);
+      border: 1px solid rgba(163, 255, 230, 0.3);
+      padding: 0.4rem 1rem;
       border-radius: 20px;
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       font-weight: 700;
       letter-spacing: 1.5px;
       text-transform: uppercase;
       margin-bottom: 1.5rem;
+      box-shadow: 0 0 15px rgba(163, 255, 230, 0.05);
     }
 
     h1 {
-      font-size: 2.8rem;
+      font-size: 2.6rem;
       font-weight: 800;
       line-height: 1.15;
       margin-bottom: 1.2rem;
+      background: linear-gradient(180deg, #FFFFFF 60%, var(--accent-silver) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     p.lead {
       color: var(--text-muted);
-      font-size: 1.15rem;
+      font-size: 1.12rem;
       line-height: 1.6;
-      margin-bottom: 2.5rem;
+      margin-bottom: 2.2rem;
     }
 
     .form-wrapper {
@@ -119,6 +125,33 @@
       border-radius: 12px;
       padding: 2rem;
       margin-bottom: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .form-wrapper::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--gradient-accent);
+    }
+
+    .form-placeholder {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      background-color: var(--accent-green);
+      border-radius: 50%;
+      box-shadow: 0 0 10px var(--accent-green);
     }
 
     footer {
@@ -134,47 +167,156 @@
     }
 
     footer a {
-      color: var(--accent);
+      color: var(--accent-mint);
       text-decoration: none;
       font-weight: 600;
+      transition: color 0.2s;
     }
-    footer a:hover { text-decoration: underline; }
+    footer a:hover { 
+      color: var(--accent-green);
+      text-decoration: underline; 
+    }
   </style>
 </head>
 <body>
 
   <header>
     <div class="logo">PILOTS <span>FPV</span></div>
-    <select class="lang-select" onchange="if(this.value) window.location.href=this.value;">
-      <option value="/" selected>🇬🇧 English</option>
-      <option value="/zh/">🇨🇳 中文</option>
-      <option value="/es/">🇪🇸 Español</option>
-      <option value="/de/">🇩🇪 Deutsch</option>
-      <option value="/fr/">🇫🇷 Français</option>
-      <option value="/it/">🇮🇹 Italiano</option>
-      <option value="/ja/">🇯🇵 日本語</option>
-      <option value="/pt/">🇵🇹 Português</option>
-      <option value="/pl/">🇵🇱 Polski</option>
-      <option value="/cs/">🇨🇿 Čeština</option>
+    <select class="lang-select" id="langSelect" onchange="changeLanguage(this.value)">
+      <option value="en">🇬🇧 English</option>
+      <option value="cs">🇨🇿 Čeština</option>
+      <option value="de">🇩🇪 Deutsch</option>
+      <option value="fr">🇫🇷 Français</option>
+      <option value="es">🇪🇸 Español</option>
+      <option value="it">🇮🇹 Italiano</option>
+      <option value="ja">🇯🇵 日本語</option>
+      <option value="pt">🇵🇹 Português</option>
+      <option value="pl">🇵🇱 Polski</option>
+      <option value="zh">🇨🇳 中文</option>
     </select>
   </header>
 
   <main>
-    <span class="badge">Global Waitlist</span>
-    <h1>The International Home for FPV Pilots</h1>
-    <p class="lead">
+    <span class="badge" id="badgeText">Global Directory</span>
+    <h1 id="headingText">The International Home for FPV Pilots</h1>
+    <p class="lead" id="leadText">
       Building the global directory and network connecting professional FPV pilots across film, industry, security, and autonomous hardware.
     </p>
 
     <div class="form-wrapper">
-      <!-- SEM VLOŽTE KÓD FORMULÁŘE Z MAILERLITE -->
-      <p style="color: var(--text-muted);">Místo pro formulář MailerLite</p>
+      <!-- MÍSTO PRO BUDOUCÍ EMBED KÓD MAILERLITE -->
+      <div class="form-placeholder">
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span class="pulse-dot"></span>
+          <span id="formStatusText">Early access & directory registration opening soon</span>
+        </div>
+      </div>
     </div>
   </main>
 
   <footer>
-    <p>Za projektem stojí a provozuje <a href="https://fpvvideo.cz" target="_blank" rel="noopener">fpvvideo.cz</a></p>
+    <p><span id="footerText">Powered and operated by</span> <a href="https://fpvvideo.cz" target="_blank" rel="noopener">fpvvideo.cz</a></p>
   </footer>
+
+  <script>
+    // Překladatelská databáze pro 10 jazyků
+    const translations = {
+      en: {
+        badge: "Global FPV Directory",
+        heading: "The International Home for FPV Pilots",
+        lead: "Building the global directory and platform connecting FPV pilots with film production, industry, and autonomous systems.",
+        formStatus: "Directory registration & newsletter opening soon",
+        footer: "Powered and operated by"
+      },
+      cs: {
+        badge: "Mezinárodní Databáze FPV Pilotů",
+        heading: "Celosvětový domov pro FPV piloty",
+        lead: "Zde vzniká globální databáze a platforma propojující FPV piloty s filmovou produkcí, průmyslem a autonomními systémy.",
+        formStatus: "Registrace do databáze a e-mailový zpravodaj spouštíme již brzy",
+        footer: "Za projektem stojí a provozuje"
+      },
+      de: {
+        badge: "Globales FPV-Verzeichnis",
+        heading: "Das internationale Zuhause für FPV-Piloten",
+        lead: "Hier entsteht die globale Datenbank und Plattform zur Vernetzung von FPV-Piloten mit Filmproduktion, Industrie und autonomen Systemen.",
+        formStatus: "Registrierung für die Datenbank öffnet in Kürze",
+        footer: "Betrieben und unterstützt von"
+      },
+      fr: {
+        badge: "Annuaire Mondial FPV",
+        heading: "La maison internationale des pilotes FPV",
+        lead: "Création de la base de données mondiale reliant les pilotes FPV au cinéma, à l'industrie et aux systèmes autonomes.",
+        formStatus: "Ouverture prochaine des inscriptions à l'annuaire",
+        footer: "Propulsé et géré par"
+      },
+      es: {
+        badge: "Directorio Global FPV",
+        heading: "El hogar internacional para pilotos de FPV",
+        lead: "Creando la base de datos global y la plataforma que conecta a pilotos de FPV con la industria cinematográfica y sistemas autónomos.",
+        formStatus: "Registro en el directorio disponible próximamente",
+        footer: "Desarrollado y operado por"
+      },
+      it: {
+        badge: "Directory Globale FPV",
+        heading: "La casa internazionale per i piloti FPV",
+        lead: "Creazione del database globale e della piattaforma che collega i piloti FPV con la produzione cinematografica, l'industria e i sistemi autonomi.",
+        formStatus: "Apertura iscrizioni al database a breve",
+        footer: "Sviluppato e gestito da"
+      },
+      ja: {
+        badge: "グローバル FPV ディレクトリ",
+        heading: "FPVパイロットのための国際プラットフォーム",
+        lead: "FPVパイロットと映像制作、産業利用、自律型システムを結ぶ世界規模のデータベースを構築中。",
+        formStatus: "データベース登録受付は間もなく開始",
+        footer: "運営・提供："
+      },
+      pt: {
+        badge: "Diretório Global FPV",
+        heading: "O lar internacional para pilotos de FPV",
+        lead: "Construindo o diretório global e a plataforma que conecta pilotos de FPV com a indústria cinematográfica e sistemas autónomos.",
+        formStatus: "Inscrições no diretório em breve",
+        footer: "Desenvolvido e operado por"
+      },
+      pl: {
+        badge: "Globalny Katalog FPV",
+        heading: "Międzynarodowy dom dla pilotów FPV",
+        lead: "Tworzymy globalną bazę danych i platformę łączącą pilotów FPV z branżą filmową, przemysłem i systemami autonomicznymi.",
+        formStatus: "Rejestracja w katalogu wkrótce dostępna",
+        footer: "Stworzone i obsługiwane przez"
+      },
+      zh: {
+        badge: "全球 FPV 飞手目录",
+        heading: "全球 FPV 飞手的国际家园",
+        lead: "正在构建连接 FPV 飞手与影视航拍、工业应用及自主系统的全球数据库与平台。",
+        formStatus: "目录注册即将开放",
+        footer: "由 fpvvideo.cz 运营"
+      }
+    };
+
+    function changeLanguage(lang) {
+      if (!translations[lang]) lang = 'en';
+      
+      document.getElementById('badgeText').innerText = translations[lang].badge;
+      document.getElementById('headingText').innerText = translations[lang].heading;
+      document.getElementById('leadText').innerText = translations[lang].lead;
+      document.getElementById('formStatusText').innerText = translations[lang].formStatus;
+      document.getElementById('footerText').innerText = translations[lang].footer;
+      
+      document.documentElement.lang = lang;
+      localStorage.setItem('preferredLang', lang);
+    }
+
+    // Automatická detekce jazyka prohlížeče nebo z uložené preference
+    document.addEventListener("DOMContentLoaded", function() {
+      const savedLang = localStorage.getItem('preferredLang');
+      const browserLang = navigator.language ? navigator.language.split('-')[0] : 'en';
+      
+      let targetLang = savedLang || (translations[browserLang] ? browserLang : 'en');
+      
+      document.getElementById('langSelect').value = targetLang;
+      changeLanguage(targetLang);
+    });
+  </script>
 
 </body>
 </html>
